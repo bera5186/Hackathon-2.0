@@ -12,6 +12,7 @@ import sqlite3
 
 conn = sqlite3.connect("data.db")
 cur  = conn.cursor()
-cur.execute("CREATE TABLE store(item TEXT, quantity INTEGER, price REAL) ")
+cur.execute("CREATE TABLE IF NOT EXISTS store(item TEXT, quantity INTEGER, price REAL) ")
+cur.execute("INSERT INTO store VALUES('wine glass', 20, 15.89)")
 conn.commit()
 conn.close()
