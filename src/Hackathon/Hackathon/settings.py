@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Registration',
     'Question',
     'Article',
+    'Category',
 ]
 
 MIDDLEWARE = [
